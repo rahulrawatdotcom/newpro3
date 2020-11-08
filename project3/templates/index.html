@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center">Challan Status Query Tax Payer</h1>
+<table border="3" align="center" width="65%"  >
+    <thead style="background-color: blue;color: white">
+    <th>NO</th>
+    <th>Challan Tender Date</th>
+    <th>Challan Serial No</th>
+    <th>Received Date</th>
+    <th>Major Head codeo</th>
+    <th>Minor Head Code</th>
+    <th>Nature of Payment</th>
+    <th>Amount</th>
+
+
+    </thead>
+    {% for chal in data %}
+    <tr style="height: 70px">
+        <th>{{ chal.NO  }}</th>
+        <th>{{ chal.Challan_Tender_Date  }}</th>
+        <th>{{ chal.Challan_Serial_No  }}</th>
+        <th>{{ chal.Received_Date }}</th>
+        <th>{{ chal.Minor_Head_Code }}</th>
+        <th>{{ chal.Minor_Head_Code  }}</th>
+        <th>{{ chal.Nature_Of_Payment  }}</th>
+        <th><input type="checkbox" value="{{ chal.Status }}"><br><input type="text" value="{{ chal.Amount  }}"></th>
+
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
